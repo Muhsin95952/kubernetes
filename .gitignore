@@ -1,4 +1,3 @@
-```gitignore
 # Kubernetes and Minikube files
 .kube/
 .minikube/

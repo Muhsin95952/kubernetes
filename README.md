@@ -70,15 +70,21 @@ Minikube is ideal for running Kubernetes locally for testing and development.
 - Installed [Minikube](https://minikube.sigs.k8s.io/docs/start/)
 
 #### **Installation Steps**
+###### Start Minikube
 ```bash
-# Start Minikube
 minikube start
-
-# Verify the status
+```
+###### Verify the status
+```bash
 minikube status
+```
 
-# View cluster info
+###### View cluster info
+```bash
 kubectl cluster-info
+```
 
-# List all nodes
+###### List all nodes
+```bash
 kubectl get nodes
+```

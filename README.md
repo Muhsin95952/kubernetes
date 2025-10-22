@@ -74,11 +74,11 @@ Minikube is ideal for running Kubernetes locally for testing and development.
    ```
 
 - Installed kubectl from here [kubectl](https://kubernetes.io/docs/tasks/tools/) OR
-##### kubectl installation
-```bash
-sudo apt update
-sudo snap install kubectl --classic
- ```
+   ##### kubectl installation
+   ```bash
+   sudo apt update
+   sudo snap install kubectl --classic
+    ```
 
 - Installed Minikube from here [Minikube](https://minikube.sigs.k8s.io/docs/start/) OR
   ##### Minikube Installation
@@ -87,21 +87,101 @@ sudo snap install kubectl --classic
   sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
    ```
 
-###### Start Minikube
-```bash
-minikube start
-```
-###### Verify the status
-```bash
-minikube status
-```
+   ###### Start Minikube
+   ```bash
+   minikube start
+   ```
+   ###### Verify the status
+   ```bash
+   minikube status
+   ```
+   
+   ###### View cluster info
+   ```bash
+   kubectl cluster-info
+   ```
+   
+   ###### List all nodes
+   ```bash
+   kubectl get nodes
+   ```
 
-###### View cluster info
-```bash
-kubectl cluster-info
-```
+   ###### Access Dashboard
+   ```bash
+   minikube dashboard
+   ```
+   You can now deploy and manage your Kubernetes workloads locally.
 
-###### List all nodes
-```bash
-kubectl get nodes
-```
+  ## ☁️ Kops Setup (Cloud Environment)
+   Kops (Kubernetes Operations) is used to deploy production-grade Kubernetes clusters on cloud providers (e.g., AWS).
+
+   #### *Prerequisites*
+   - AWS CLI configured (aws configure)
+   - A registered domain in Route53 (for DNS-based cluster naming)
+   - Installed kubectl
+   - Installed kops
+   - S3 bucket for cluster state storage
+   
+   #### *Installion Steps*
+   ###### Create an S3 bucket for cluster state
+   ```bash
+   aws s3api create-bucket --bucket my-kops-state-store --region us-east-1
+   ```
+   
+   ###### Export environment variables
+   ```bash
+   export KOPS_STATE_STORE=s3://my-kops-state-store
+   export NAME=mycluster.k8s.local
+   ```
+   
+   ###### Create a cluster configuration
+   ```bash
+   kops create cluster --name=${NAME} --zones=us-east-1a --state=${KOPS_STATE_STORE} --yes
+   ```
+   
+   ###### Validate the cluster
+   ```bash
+   kops validate cluster
+   ```
+   
+   ###### Get cluster info
+   ```bash
+   kubectl cluster-info
+   ```
+   
+   ###### Delete cluster (if needed)
+   ```bash
+   kops delete cluster --name=${NAME} --state=${KOPS_STATE_STORE} --yes
+   ```
+   
+   📝 **Note:** You can customize instance types, node count, and networking using additional flags.
+   
+   
+   ## 🧰 Useful Commands
+   ```bash
+   # Check cluster nodes
+   kubectl get nodes
+   
+   # Get pods in all namespaces
+   kubectl get pods -A
+   
+   # Describe a pod
+   kubectl describe pod <pod-name>
+   
+   # Apply configuration file
+   kubectl apply -f deployment.yaml
+   
+   # Delete deployment
+   kubectl delete -f deployment.yaml
+   ```
+   
+   ## 📚 References
+   [Kubernetes Official Documentation](https://kubernetes.io/docs/)
+   [Minikube Docs](https://minikube.sigs.k8s.io/docs/)
+   [Kops GitHub](https://github.com/kubernetes/kops)
+   [AWS CLI Setup Guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
+
+   ## 💡 Author
+   Muhsin Shah   
+   🎓 Computer Systems Engineer | ☁️ DevOps Enthusiast | 🤖 AI & ML Learner
+   📍 [GitHub Profile](https://www.github.com/Muhsin995952)

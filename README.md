@@ -176,12 +176,12 @@ Minikube is ideal for running Kubernetes locally for testing and development.
    ```
    
    ## 📚 References
-   [Kubernetes Official Documentation](https://kubernetes.io/docs/)
-   [Minikube Docs](https://minikube.sigs.k8s.io/docs/)
-   [Kops GitHub](https://github.com/kubernetes/kops)
-   [AWS CLI Setup Guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
+   1. [Kubernetes Official Documentation](https://kubernetes.io/docs/)
+   2. [Minikube Docs](https://minikube.sigs.k8s.io/docs/)
+   3. [Kops GitHub](https://github.com/kubernetes/kops)
+   4. [AWS CLI Setup Guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
 
    ## 💡 Author
-   Muhsin Shah   
-   🎓 Computer Systems Engineer | ☁️ DevOps Enthusiast | 🤖 AI & ML Learner
-   📍 [GitHub Profile](https://www.github.com/Muhsin995952)
+   - Muhsin Shah   
+   - 🎓 Computer Systems Engineer | ☁️ DevOps Enthusiast | 🤖 AI & ML Learner
+   - 📍 [GitHub Profile](https://www.github.com/Muhsin995952)

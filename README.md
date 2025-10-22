@@ -1,4 +1,5 @@
-# 🚀 Kubernetes Setup and Architecture Guide
+# Kubernetes 
+## Setup and Architecture Guide
 
 This repository provides a comprehensive overview of **Kubernetes**, including its **architecture**, and detailed **installation guides** using **Minikube** (for local development) and **Kops** (for production-grade clusters on the cloud).  
 It’s designed for DevOps practitioners and learners who want to understand and deploy Kubernetes clusters effectively.
@@ -65,11 +66,27 @@ These run the actual workloads (containers):
 Minikube is ideal for running Kubernetes locally for testing and development.
 
 #### **Prerequisites**
-- Installed [Docker](https://docs.docker.com/get-docker/) or [VirtualBox](https://www.virtualbox.org/)
-- Installed [kubectl](https://kubernetes.io/docs/tasks/tools/)
-- Installed [Minikube](https://minikube.sigs.k8s.io/docs/start/)
+- Installed Docker from here [Docker](https://docs.docker.com/get-docker/) OR 
+  ##### Docker insallation
+  ```bash
+  sudo apt-get update
+  sudo apt-get install docker.io -y
+   ```
 
-#### **Installation Steps**
+- Installed kubectl from here [kubectl](https://kubernetes.io/docs/tasks/tools/) OR
+##### kubectl installation
+```bash
+sudo apt update
+sudo snap install kubectl --classic
+ ```
+
+- Installed Minikube from here [Minikube](https://minikube.sigs.k8s.io/docs/start/) OR
+  ##### Minikube Installation
+  ```bash
+  curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
+  sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
+   ```
+
 ###### Start Minikube
 ```bash
 minikube start

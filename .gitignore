@@ -1,1 +1,50 @@
+```gitignore
+# Kubernetes and Minikube files
+.kube/
+.minikube/
+.kops/
+.kubernetes/
+
+# Logs
+*.log
+*.out
+*.err
+
+# macOS and system files
+.DS_Store
+Thumbs.db
+
+# Python / Node.js environments (if used)
+venv/
+node_modules/
+__pycache__/
+*.pyc
+
+# Backup and temporary files
+*.swp
+*.bak
+*.tmp
+*.old
+*.zip
+*.tar
+*.tar.gz
+
+# Secrets and credentials
+*.pem
+*.key
+*.crt
+*.env
+.env.local
+.env.*
+!example.env
+
+# IDE and editor configs
+.vscode/
+.idea/
+*.iml
+
+# AWS and Terraform states (if used)
+.terraform/
+terraform.tfstate*
+*.tfvars
 

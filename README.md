@@ -4,8 +4,6 @@
 This repository provides a comprehensive overview of **Kubernetes**, including its **architecture**, and detailed **installation guides** using **Minikube** (for local development) and **Kops** (for production-grade clusters on the cloud).  
 It’s designed for DevOps practitioners and learners who want to understand and deploy Kubernetes clusters effectively.
 
----
-
 ## 📘 Table of Contents
 
 1. [Introduction](#introduction)
@@ -16,7 +14,7 @@ It’s designed for DevOps practitioners and learners who want to understand and
 4. [Useful Commands](#useful-commands)
 5. [References](#references)
 
----
+
 
 ## 🧠 Introduction
 
